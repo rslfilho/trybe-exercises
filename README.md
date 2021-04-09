@@ -10,6 +10,8 @@ A Trybe também inova na forma de pagamento do curso. Com o
 Modelo de Sucesso Compartilhado (MSC) o estudante pode, se preferir,
 fazer o pagamento somente depois de formado e já empregado.
 
+    https://www.betrybe.com/
+
 ====    Aluno: Roberval Filho
 
 ====    Turma: Turma 12

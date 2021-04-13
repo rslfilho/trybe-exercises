@@ -19,6 +19,6 @@ nosso primeiro repositório e testamos fazer commit e push.
 
 12/04 - Utilizamos esse mesmo diretório nos exercícios do dia 12/04/2021. 
 Nessa aula aprendemos, entre outros assuntos, a iniciar um Pull Request, 
-aguardar a contribuição dos colegas revisando nossas alteraçÕes e, depois 
+aguardar a contribuição dos colegas revisando nossas alterações e, depois 
 das aprovações fazer o Merge. Também podemos contribuir com os colegas 
 fazendo Review das alterações deles.

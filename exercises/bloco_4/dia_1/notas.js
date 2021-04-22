@@ -1,6 +1,9 @@
-let score = 95;
+let score = 125;
 
-if(score >= 90) {
+if(score<0 || score>100) {
+    console.log('Erro - Nota inválida.')
+}
+else if(score >= 90) {
     console.log('A');
 }
 else if(score >= 80) {

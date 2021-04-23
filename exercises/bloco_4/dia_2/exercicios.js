@@ -18,7 +18,7 @@ console.log('');
 let sum = 0;
 
 for (let index = 0; index < numbers.length; index += 1) {
-  sum = sum + numbers[index];
+  sum += numbers[index];
 };
 
 console.log(sum);

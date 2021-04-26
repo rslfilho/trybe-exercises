@@ -88,10 +88,3 @@ if (n > 1 && n % 2 != 0) {
 else {
   console.log('Erro - N precisa ser maior que 1 e ímpar');
 };
-
-//5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
-
-console.log('');
-console.log('Questão Bônus 05');
-console.log('');
-

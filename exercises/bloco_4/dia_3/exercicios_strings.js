@@ -100,7 +100,54 @@ else {
 
 // //5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
 
-// console.log('');
-// console.log('Questão Bônus 05');
-// console.log('');
+console.log('');
+console.log('Questão Bônus 05');
+console.log('');
 
+n = 7;
+linha = '';
+meio = (n + 1) / 2;
+esquerda = meio;
+direita = meio;
+
+if (n > 1 && n % 2 != 0) {
+  for (let index = 0; index < meio; index += 1) {
+    for (let index2 = 0; index2 < n; index2 += 1) {
+      if (index2 == esquerda - 1 || index2 == direita -1 || index == meio - 1) {
+        linha += '*';
+      }
+      else {
+        linha += ' ';
+      };
+    };
+    console.log(linha);
+    linha = '';
+    esquerda -= 1;
+    direita += 1;
+  };
+}
+else {
+  console.log('Erro - N precisa ser maior que 1 e ímpar');
+};
+
+// 6- Faça um programa que diz se um número definido numa variável é primo ou não.
+
+console.log('');
+console.log('Questão Bônus 06');
+console.log('');
+
+let number = 11;
+let isDivisible = [];
+
+for (let index = 1; index <= number; index += 1) {
+  if (number % index == 0) {
+    isDivisible.push(index);
+  };
+};
+
+if (isDivisible.length == 2 && isDivisible[0] == 1 && isDivisible[1] == number) {
+  console.log(`O número ${number} é primo`);
+}
+else {
+  console.log(`O número ${number} não é primo`);
+};

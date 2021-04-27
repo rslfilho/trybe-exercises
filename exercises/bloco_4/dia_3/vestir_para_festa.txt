@@ -1,0 +1,12 @@
+1 - Decidir a roupa que vai usar
+2 - Decidir o sapato que vai usar
+3 - Abrir o armário
+4 - Retirar a roupa que vai usar 
+5 - Retirar o sapato que vai usar
+6 - Vestir a cueca
+7 - Vestir a meia
+8 - Vestir a calça
+9 - Colocar o cinto
+10 - Calçar o sapato
+11 - Vestir a camisa
+12 - Fechar o armário

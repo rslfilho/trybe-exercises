@@ -1,0 +1,57 @@
+=> Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log() ;
+
+1 - Criar uma estrutura de repetição que percorra o array
+2 - Para cada item do array, imprimi-lo com console.log
+
+=> Para o segundo exercício, some todos os valores contidos no array e imprima o resultado;
+
+1 - Criar uma variável com valor 0 que irá receber a soma
+2 - Criar uma estrutura de repetição que percorra o array
+3 - Para cada item do array, incrementar o valor na variável criada
+4 - Ao final, imprimir o valor da variável que recebeu a soma
+
+=> Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
+
+1 - Executar do 1 ao 3 da última
+2 - Criar uma variável que receberá o valor da média
+3 - Dividir o valor da soma pelo valor do lenght do array e colocar na variável criada
+4 - Imprimir o valor da variável que recebeu a média
+
+=> Com o mesmo código do exercício anterior, caso o valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
+
+1 - Criar uma estrutura condicional que teste se o valor da média anterior é maior que 20
+2 - se for maior imprimir "valor maior que 20"
+3 - se for menor imprimir "valor menor ou igual a 20""
+
+=> Utilizando for , descubra qual o maior valor contido no array e imprima-o;
+
+1 - Criar uma variável com valor igual ao primeiro item do array
+2 - Criar uma estrutura de repetição que percorra o array a partir do segundo item
+3 - criar uma estrutura condicional dentro da repetição que teste se o item do array é maior que o valor armezenado na variável criada
+4 - Se for maior, substituir o valor da variável pelo do item do array
+5 - Ao final da repetição, imprima o valor da variável criada
+
+=> Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+
+1 - Criar uma variável com valor 0
+2 - Criar uma estrutura de repetição que percorra o array
+3 - Criar uma estrutura condicional dentro da repetição que testa se cada item do array tem resto de divisão por 2 igual a zero
+4 - Se o resto for diferente de 0, incrimentar em 1 o valor da variável criada
+5 - Ao final da repetição, imprimir o valor da variável criada
+
+=> Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+
+Igual a de maior, só que testando se é menor no passo 3
+
+=> Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+
+1 - Cria uma variável array vazio
+2 - Cria uma estrutura de repetição que vai de 1 a 25
+3 - A cada loop acrescentar o valor do index ao array
+4 - Ao final da repetição, imprimir o array
+
+=> Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+
+1 - Criar uma estrutura de repetição que percorra o array
+2 - A cada item do array, dividir o valor dele por 2
+3 - A cada item do array, imprimir o seu valor

@@ -5,7 +5,7 @@ let names = {
 }
 
 for (let key in names) {
-  console.log('Olá ' + names[key]);
+  console.log('Olá ' + names['key']);
 }
 
 let carro = {

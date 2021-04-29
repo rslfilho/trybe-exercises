@@ -27,4 +27,4 @@ function Romanos(roma) {
   return result;
 }
 
-console.log(Romanos('MCMXVIII'));
+console.log(Romanos(MMXVIII));

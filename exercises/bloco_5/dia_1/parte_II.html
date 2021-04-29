@@ -2,13 +2,28 @@
 <html>
   <body>
     <h2 id="page-title">Título</h2>
-    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <p class="classP" id="paragraph">Dê uma cor para este parágrafo!</p>
     <h4 id="subtitle">Subtítulo</h4>
-    <p id="second-paragraph">Segundo parágrafo!</p>
+    <p class="classP" id="second-paragraph">Segundo parágrafo!</p>
 
     <script>
-      var paragraph = document.getElementById("paragraph");
+      var paragraph = document.querySelector("#paragraph");
       paragraph.style.color = "red";
+
+      var title = document.querySelector('#page-title');
+      title.innerText = 'Gladiador';
+
+      var second_paragraph = document.querySelector('#second-paragraph');
+      second_paragraph.innerText = 'Vamos substituir o segundo parágrafo usando JavaScript!!';
+
+      var subtitle = document.querySelector('#subtitle');
+      subtitle.innerText = 'Não tenho criatividade pra substituir mais coisas kkkk';
+
+      var classP = document.querySelectorAll('.classP');
+      classP[0].style.color = 'blue';
+
+      var subtitleTag = document.querySelectorAll('h4');
+      subtitleTag[0].style.color = 'yellow';
     </script>
   </body>
 </html>

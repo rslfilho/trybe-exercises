@@ -58,17 +58,21 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+      function createElement(element, classe, content) {
+        let createElement = document.createElement(element);
+        createElement.className = classe;
+        createElement.innerHTML = content;
+        return createElement;
+      }
+
       // R1
-      let creatH1 = document.createElement('h1');
-      creatH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
-      document.body.appendChild(creatH1);
+      document.body.appendChild(createElement('h1', ' ', 'Exercício 5.2 - JavaScript DOM'));
 
-      //R2
-      let createMainContent = document.createElement('div');
-      createMainContent.className = 'main-content';
-      document.body.appendChild(createMainContent);
+      // // R2
+      document.body.appendChild(createElement('div', 'main-content', ''));
 
-      
+      // // R3
+      let mainContent = document.body.firstElementChild.nextElementSibling.appendChild(createElement('div', 'center-content', ''));
     </script>
   </body>
 </html>

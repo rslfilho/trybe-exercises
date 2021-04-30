@@ -68,11 +68,38 @@
       // R1
       document.body.appendChild(createElement('h1', ' ', 'Exercício 5.2 - JavaScript DOM'));
 
-      // // R2
+      // R2
       document.body.appendChild(createElement('div', 'main-content', ''));
 
-      // // R3
-      let mainContent = document.body.firstElementChild.nextElementSibling.appendChild(createElement('div', 'center-content', ''));
+      // R3
+      document.body.lastElementChild.appendChild(createElement('div', 'center-content', '')); 
+
+      // R4
+      document.body.lastElementChild.firstElementChild.appendChild(createElement('p', '', 'Texto do P'));
+
+      // R5
+      document.body.lastElementChild.appendChild(createElement('div', 'left-content', ''));
+
+      // R6
+      document.body.lastElementChild.appendChild(createElement('div', 'right-content', ''));
+
+      // R7
+      document.body.lastElementChild.firstElementChild.nextElementSibling.appendChild(createElement('img', 'small-image', ''));
+      document.body.lastElementChild.firstElementChild.nextElementSibling.firstElementChild.src = 'https://picsum.photos/200';
+
+      // R8 
+      document.body.lastElementChild.lastElementChild.appendChild(createElement('ul', '', ''));
+      let ul = document.body.lastElementChild.lastElementChild.firstElementChild;
+      let values = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      for (let index = 0; index < values.length; index += 1) {
+        ul.appendChild(createElement('li', '', values[index]));
+      }
+      
+      // R9 
+      for (let index = 0; index < 3; index += 1){
+        document.body.lastElementChild.appendChild(createElement('h3', '', ''));
+      }
     </script>
   </body>
 </html>

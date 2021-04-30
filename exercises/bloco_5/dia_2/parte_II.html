@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+  <script>
+    let papai = document.getElementById('pai');
+    let filhoCriado = document.createElement('div');
+    filhoCriado.innerHTML = 'Sou o Filho Criado';
+    papai.appendChild(filhoCriado);
+
+    let ondeEstou = document.getElementById('elementoOndeVoceEsta');
+    let filhoOndeEstou = document.createElement('div');
+    filhoOndeEstou.innerHTML = 'Sou o Filho de Onde Estou';
+    ondeEstou.appendChild(filhoOndeEstou);
+
+    let primeiro = document.getElementById('primeiroFilho');
+    let filhoPrimeiro = document.createElement('div');
+    filhoPrimeiro.innerHTML = 'Filho do Primeiro';
+    primeiro.appendChild(filhoPrimeiro);
+
+    let filhoDoPrimeiroFilho = document.getElementById('primeiroFilho').firstChild;
+    console.log(filhoDoPrimeiroFilho.parentElement.parentElement.lastElementChild.previousElementSibling.previousElementSibling);
+  </script>
+</body>
+</html>

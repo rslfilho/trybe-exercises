@@ -100,3 +100,14 @@ for (let index = 0; index < days.length; index += 1) {
     event.target.style.fontSize = '20px';
   });
 };
+
+// Exercício 07
+function createTask(string) {
+  let taskList = document.querySelector('.my-tasks');
+  let task = document.createElement('span');
+  task.innerHTML = string;
+
+  taskList.appendChild(task);
+}
+
+createTask('Cozinhar');

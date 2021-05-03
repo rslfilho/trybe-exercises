@@ -137,4 +137,18 @@ for (let index = 0; index < taskColor.length; index += 1) {
   });
 };
 
+// Exercício 10
+let dayColor = document.querySelectorAll('.day');
 
+for (let index = 0; index < dayColor.length; index += 1) {
+  dayColor[index].addEventListener('click', function() {
+    if (dayColor[index].style.backgroundColor === 'green') {
+      dayColor[index].style.backgroundColor = 'rgb(238,238,238)'
+      dayColor[index].style.color = '#777';
+    } else {
+      dayColor[index].style.backgroundColor = 'green';
+      dayColor[index].style.color = 'white';
+
+    };
+  });
+};

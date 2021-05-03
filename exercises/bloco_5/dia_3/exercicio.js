@@ -111,3 +111,15 @@ function createTask(string) {
 }
 
 createTask('Cozinhar');
+
+// Exercício 08
+function addColor(color) {
+  let taskList = document.querySelector('.my-tasks');
+  let background = document.createElement('div');
+  background.style.backgroundColor = color;
+  background.className = 'task';
+
+  taskList.appendChild(background);
+}
+
+addColor('green');

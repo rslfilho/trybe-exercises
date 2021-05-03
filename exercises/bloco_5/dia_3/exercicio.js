@@ -152,3 +152,27 @@ for (let index = 0; index < dayColor.length; index += 1) {
     };
   });
 };
+
+// Exercício Bônus
+let addButton = document.getElementById('btn-add');
+let input = document.getElementById('task-input');
+
+addButton.addEventListener('click', clickButton);
+
+function clickButton() {
+  if (input.value === '') return alert('Nenhuma tarefa a adicionar, escreva alguma!')
+
+  let taskList = document.querySelector('.task-list');
+  let task = document.createElement('li');
+  task.innerHTML = input.value;
+
+  taskList.appendChild(task);
+}
+
+input.addEventListener('keyup', function(event) {
+  // Source https://stackoverflow.com/questions/155188/trigger-a-button-click-with-javascript-on-the-enter-key-in-a-text-box
+  event.preventDefault(); 
+  if (event.keyCode === 13) {
+    addButton.click();
+  }
+});

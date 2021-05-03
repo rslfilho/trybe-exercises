@@ -123,3 +123,18 @@ function addColor(color) {
 }
 
 addColor('green');
+
+// Exercício 09
+let taskColor = document.querySelectorAll('.task');
+
+for (let index = 0; index < taskColor.length; index += 1) {
+  taskColor[index].addEventListener('click', function() {
+    if (taskColor[index].className === 'task selected') {
+      taskColor[index].className = 'task';
+    } else {
+      taskColor[index].className = 'task selected';
+    };
+  });
+};
+
+

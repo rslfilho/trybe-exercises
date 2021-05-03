@@ -55,10 +55,10 @@ createButton('Feriados', 'btn-holiday');
 
 // Exercício 03
 let holidayButton = document.getElementById('btn-holiday');
-console.log(holidayButton)
+
 holidayButton.addEventListener('click', function () {
   let holidays = document.querySelectorAll('.holiday');
-  console.log(holidays)
+  
   for (let index = 0; index < holidays.length; index += 1) {
     if (holidays[index].style.backgroundColor === 'white') {
       holidays[index].style.backgroundColor = 'rgb(238,238,238)';
@@ -72,3 +72,19 @@ holidayButton.addEventListener('click', function () {
 
 // Exercício 04
 createButton('Sexta-Feira', 'btn-friday');
+
+// Exercício 05
+const fridayDays = [4, 11, 18, 25]
+let fridayButton = document.getElementById('btn-friday');
+
+fridayButton.addEventListener('click', function () {
+  let fridays = document.querySelectorAll('.friday');
+  
+  for (let index = 0; index < fridays.length; index += 1) {
+    if (fridays[index].innerHTML === 'SEXTA!!') {
+      fridays[index].innerHTML = fridayDays[index];
+    } else {
+      fridays[index].innerHTML = 'SEXTA!!';
+    }
+  }
+});

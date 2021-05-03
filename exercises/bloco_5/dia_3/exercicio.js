@@ -42,16 +42,16 @@ function createDaysOfTheMonth() {
 createDaysOfTheMonth();
 
 // Exercício 02
-function createHolidayButton(string) {
+function createButton(string, id) {
   let btnContainer = document.querySelector('.buttons-container');
   let button = document.createElement('button');
-  button.id = 'btn-holiday';
+  button.id = id;
   button.innerHTML = string;
 
   btnContainer.appendChild(button);
 }
 
-createHolidayButton('Feriados');
+createButton('Feriados', 'btn-holiday');
 
 // Exercício 03
 let holidayButton = document.getElementById('btn-holiday');
@@ -69,3 +69,6 @@ holidayButton.addEventListener('click', function () {
     }
   }
 });
+
+// Exercício 04
+createButton('Sexta-Feira', 'btn-friday');

@@ -88,3 +88,15 @@ fridayButton.addEventListener('click', function () {
     }
   }
 });
+
+// Exercício 06
+let days = document.getElementsByClassName('day');
+
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+  });
+  days[index].addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+  });
+};

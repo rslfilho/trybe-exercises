@@ -11,8 +11,35 @@ header {
   padding-bottom: 1px;
 }
 
-.text-container {
+main {
   background-color: #9cdef6;
+  padding-top: 1px;
+}
+
+.edit-container {
+  margin-left: 20px;
+}
+
+.edit-item {
+  display: inline-block;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.edit-item p {
+  margin-right: 5px;
+}
+
+.edit-item div {
+  display: inline-block;
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.text-container {
   color: white;
   padding: 20px 30px;
 }

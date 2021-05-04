@@ -131,27 +131,39 @@ for (let index = 0; index < taskColor.length; index += 1) {
   taskColor[index].addEventListener('click', function() {
     if (taskColor[index].className === 'task selected') {
       taskColor[index].className = 'task';
+      removeEventIfClass();
     } else {
       taskColor[index].className = 'task selected';
+      addEventIfClass();
     };
+    
   });
 };
 
 // Exercício 10
 let dayColor = document.querySelectorAll('.day');
+let checkSelection = document.querySelector('.my-tasks').lastElementChild;
 
-for (let index = 0; index < dayColor.length; index += 1) {
-  dayColor[index].addEventListener('click', function() {
-    if (dayColor[index].style.backgroundColor === 'green') {
-      dayColor[index].style.backgroundColor = 'rgb(238,238,238)'
-      dayColor[index].style.color = '#777';
-    } else {
-      dayColor[index].style.backgroundColor = 'green';
-      dayColor[index].style.color = 'white';
+function changeColor(event) {
+  if (event.target.style.color === 'green') {
+    event.target.style.color = 'rgb(119,119,119)';
+  } else {
+    event.target.style.color = 'green';
+  };
+}
 
-    };
-  });
-};
+function addEventIfClass() {
+  for (let index = 0; index < dayColor.length; index += 1) {
+    dayColor[index].addEventListener('click', changeColor);
+  
+  };
+}
+
+function removeEventIfClass() {
+  for (let index = 0; index < dayColor.length; index += 1) {
+    dayColor[index].removeEventListener('click', changeColor)
+  }
+}
 
 // Exercício Bônus
 let addButton = document.getElementById('btn-add');

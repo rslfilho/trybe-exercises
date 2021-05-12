@@ -13,6 +13,18 @@ header, main, footer {
   border: 1px solid #dcbb95;
 }
 
+#curriculum {
+  background-color: #c99e84;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #dcbb95;
+}
+
+h6 {
+  font-size: 18px;
+}
+
 h4 {
   text-decoration: underline;
   margin: 20px 0px;

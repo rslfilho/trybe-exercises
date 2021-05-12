@@ -16,27 +16,42 @@
   </header>
   <main class="container">
     <section class="container" id="form">
-      <form action="" method="get" enctype="multipart/form-data">
+      <form class="needs-validation" action="" method="get" enctype="multipart/form-data" novalidate>
         <h4>Dados Pessoais</h4>
         <div class="container mb-3 row">
           <label class="form-label" class="form-label" for="name">Nome Completo</label>
           <input class="form-control" type="text" name="name" id="name" maxlength="40" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
         </div>
         <div class="container mb-3 row">
           <label class="form-label" for="email">Email</label>
           <input class="form-control" type="email" name="email" id="email" maxlength="50" required>
+          <div class="invalid-feedback">
+            Email inválido!
+          </div>
         </div>
         <div class="container mb-3 row">
           <label class="form-label" for="cpf">CPF</label>
           <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
         </div>
         <div class="container mb-3 row">
           <label class="form-label" for="adress">Endereço</label>
           <input class="form-control" type="text" name="adress" id="adress" maxlength="200" required></input>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
         </div>
         <div class="container mb-3 row">
           <label class="form-label" for="city">Cidade</label>
           <input class="form-control" type="text" name="city" id="city" maxlength="28" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
         </div>
         <div class="container mb-3 row">
           <label class="form-label" for="state">Estado</label>
@@ -57,18 +72,30 @@
         <div class="container mb-3 row">
           <label class="form-label" for="resume">Resumo do currículo</label>
           <textarea class="form-control" name="resume" id="resume" cols="30" rows="3" maxlength="1000" placeholder="Descreva as atividades que desempenhava no seu último emprego" required></textarea>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
         </div>
         <div class="container mb-3 row">
           <label class="form-label" for="office">Cargo</label>
           <input class="form-control" type="text" name="office" id="office" maxlength="40" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
         </div>
         <div class="container mb-3 row">
           <label class="form-label" for="office-description">Descrição do cargo</label>
           <input class="form-control" type="text" name="office-description" id="office-description" maxlength="500" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
         </div>
         <div class="container mb-3 row">
           <label class="form-label" for="initial-date">Data de início</label>
           <input class="form-control" type="text" name="initial-date" id="initial-date" maxlength="10" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
         </div>
         <hr>
         <div class="container mb-3 text-center">

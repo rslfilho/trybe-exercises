@@ -1,3 +1,5 @@
+
+
 function addStates() {
   const states = [
     'AC',
@@ -38,6 +40,16 @@ function addStates() {
     parentElement.appendChild(optionState);
   }
 }
+
+let picker = new Pikaday({ 
+  field: document.getElementById('initial-date'),
+  format: 'DD MM YYYY',
+  defaultDate: '01/01/2021',
+  setDefaultDate: true,
+  onselect: function() {
+    console.log(this.getMoment().format('do MMMM YYYY'));
+  }
+});
 
 // function createErrorSection() {
 //   const parentElement = document.querySelector('main');

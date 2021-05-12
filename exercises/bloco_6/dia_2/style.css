@@ -1,78 +1,40 @@
 body {
-  margin: 0;
-  background-color: #c99e84;
-  font-family: sans-serif;
-  color: #b47f75;
-}
-
-header {
-  background-color: #e9dabc;
-  text-align: center;
-  width: 80%;
-  border-radius: 5px;
-  border: 1px solid #dcbb95;
-  padding: 20px;
-  margin: 30px auto;
-}
-
-section {
-  background-color: #e9dabc;
-  width: 80%;
-  border-radius: 5px;
-  border: 1px solid #dcbb95;
-  padding: 20px;
-  margin: 30px auto;
-}
-
-fieldset {
-  margin: 30px;
-  border-color: #A1BCC7;
-}
-
-legend {
-  font-size: 20px;
-}
-
-fieldset p {
-  margin: 10px 50px 20px 20px;
-}
-
-input[type="text"] {
+  max-width: 80%;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #dcbb95;
+  margin: 30px auto;
+  background-color: #e9dabc;
+}
+
+header, main, footer {
+  background-color: #c99e84;
   border-radius: 5px;
-  margin-top: 10px;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #dcbb95;
+}
+
+h4 {
+  text-decoration: underline;
+  margin: 20px 0px;
+}
+
+.form-select {
+  width: 25%;
 }
 
 textarea {
-  width: 100%;
   resize: none;
-  padding: 10px;
-  border: 1px solid #dcbb95;
-  border-radius: 5px;
-  margin-top: 10px;
 }
 
-#curriculum p {
-  color: #c99eb4;
-}
-
-#error p {
-  color: red;
-}
-
-footer {
-  background-color: #e9dabc;
-  text-align: center;
-  width: 70%;
-  border-radius: 5px;
-  border: 1px solid #dcbb95;
-  padding: 5px;
-  margin: 30px auto;
+button {
+  margin: 5px 10px;
 }
 
 footer a {
-  color: #A1BCC7;
+  color: #ccdce2;
   text-decoration: none;
+}
+
+footer a:hover {
+  color: #ccdce2;
 }

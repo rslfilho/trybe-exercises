@@ -1,5 +1,3 @@
-
-
 function addStates() {
   const states = [
     'AC',
@@ -43,12 +41,9 @@ function addStates() {
 
 let picker = new Pikaday({ 
   field: document.getElementById('initial-date'),
-  format: 'DD MM YYYY',
+  format: 'DD/MM/YYYY',
   defaultDate: '01/01/2021',
   setDefaultDate: true,
-  onselect: function() {
-    console.log(this.getMoment().format('do MMMM YYYY'));
-  }
 });
 
 // function createErrorSection() {

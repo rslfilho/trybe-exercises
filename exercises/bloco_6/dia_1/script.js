@@ -39,21 +39,42 @@ function addStates() {
   }
 }
 
+function createErrorSection() {
+  const parentElement = document.querySelector('main');
+  const section = document.createElement('section');
+
+  section.id = 'error';
+  section.innerHTML = '<fieldset id="errorInfo"><legend>Algo deu Errado</legend></fieldset>';
+
+  parentElement.insertBefore(section, parentElement.firstElementChild);
+}
+
+function createErrorP(typeOfError) {
+  const parentElement = document.getElementById('errorInfo');
+  const errorP = document.createElement('p');
+
+  if (typeOfError === 'completion') {
+    errorP.innerHTML = 'Todos os campos são Obrigatórios!';
+  } else if (typeOfError === 'invalidDate') {
+    errorP.innerHTML = 'Data Inválida!';
+  }
+
+  parentElement.appendChild(errorP);
+}
+
 function checkCompletion() {
   const inputs = document.getElementsByTagName('input');
   const textAreas = document.getElementsByTagName('textarea');
 
   for (let index = 0; index < inputs.length; index += 1) {
     if (inputs[index].value === '') {
-      alert('Preencha todos os campos!');
-      break;
+      return createErrorSection(), createErrorP('completion');
     } 
   }
 
   for (let index = 0; index < textAreas.length; index += 1) {
     if (textAreas[index].value === '') {
-      alert('Preencha todos os campos!');
-      break;
+      return createErrorSection(), createErrorP('completion');
     } 
   }
 
@@ -73,11 +94,11 @@ function checkCompletion() {
 // }
 
 function checkDate() {
-  const dateValue = document.getElementById('initial-date').value;
+  const dateInput = document.getElementById('initial-date');
   const datePattern = /^\d\d\/\d\d\/\d\d\d\d$/;
   
-  if (datePattern.test(dateValue) === false) {
-    alert('Data em formato não permitido');
+  if (datePattern.test(dateInput.value) === false) {
+    return createErrorSection(), createErrorP('invalidDate');
   }
   return 'go';
 }
@@ -87,24 +108,92 @@ function createCvSection() {
   const section = document.createElement('section');
 
   section.id = 'curriculum';
-  section.innerHTML = '<h2>Seu Currículo</h2> <div></div>';
+  section.innerHTML = '<h2>Seu Currículo</h2><fieldset id="personal"><legend>Dados Pessoais</legend></fieldset><fieldset id="last-job"><legend>Dados do último Emprego</legend></fieldset>';
 
-  parentElement.appendChild(section);
+  parentElement.insertBefore(section, parentElement.firstElementChild);
 }
 
-function createIdArray() {
-  const labels = document.querySelectorAll('label');
-  const allFors = [];
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
 
-  for (let index = 0; index < labels.length; index += 1) {
-    allFors[index] = labels[index].htmlFor;
+function createNameArray() {
+  const form = document.forms[0];
+  const allNames = [];
+
+  for (let index = 0; index < form.length; index += 1) {
+    allNames[index] = form.elements[index].name;
   }
 
-  return allFors;
+  const noEmptyNames = allNames.filter( (el) => { return el; });
+  return noEmptyNames.filter(onlyUnique);
+}
+
+function createNameP(inputIndex) {
+  const inputNames = createNameArray();
+  const personalData = document.getElementById('personal');
+  const lastJobData = document.getElementById('last-job');
+  const dataField = document.createElement('p');
+  
+  dataField.innerHTML = document.forms[0].elements[inputNames[inputIndex]].value
+  
+  if (inputIndex < 7) {
+    personalData.appendChild(dataField);
+  } else {
+    lastJobData.appendChild(dataField);
+  }
+  
+}
+
+function createLabelArray() {
+  const labels = document.querySelectorAll('label');
+  const allLabels = [];
+
+  for (let index = 0; index < labels.length; index += 1) {
+    if (index === 6) {
+      allLabels.push('Tipo:');
+      index += 2;
+    }
+
+    allLabels.push(labels[index].innerHTML);
+  }
+
+  return allLabels;
+}
+
+function createLabel(labelIndex) {
+  const labelContent = createLabelArray();
+  const personalData = document.getElementById('personal');
+  const lastJobData = document.getElementById('last-job');
+  const labelField = document.createElement('label');
+
+  labelField.innerHTML = labelContent[labelIndex];
+  
+  if (labelIndex < 7) {
+    personalData.appendChild(labelField);
+  } else {
+    lastJobData.appendChild(labelField);
+  }
+  
 }
 
 function createCurriculum() {
+  createCvSection();
+  
+  for (let index = 0; index < 11; index += 1) {
+    createLabel(index);
+    createNameP(index);
+  }
+  
+}
 
+function removeCreatedElement() {
+  const parentElement = document.querySelector('main');
+  const formElement = document.querySelector('#form');
+  
+  if (formElement !== parentElement.firstElementChild) {
+    parentElement.removeChild(parentElement.firstElementChild);
+  }
 }
 
 function eventSubmitForm() {
@@ -112,12 +201,38 @@ function eventSubmitForm() {
   
   button.addEventListener('click', (event) => {
     event.preventDefault();
-    checkCompletion();
-    // checkMaxLength();
-    checkDate();
+    removeCreatedElement();
 
+    if (checkCompletion() === 'go' && checkDate() === 'go') {
+      createCurriculum();
+      location.href = '#curriculum';
+    } else {
+      location.href = '#error';
+    }
+    // checkCompletion();
+    // // checkMaxLength();
+    // checkDate();
+  })
+}
+
+function eventClearButton() {
+  const clearButton = document.getElementById('clear');
+  const inputs = document.querySelectorAll('input');
+  const textarea = document.querySelectorAll('textarea');
+
+  clearButton.addEventListener('click', () => {
+    removeCreatedElement();
+
+    for (let indexInputs = 0; indexInputs < inputs.length; indexInputs += 1) {
+      inputs[indexInputs].value = '';
+    }
+
+    for (let indexTextArea = 0; indexTextArea < textarea.length; indexTextArea += 1) {
+      textarea[indexTextArea].value = '';
+    }
   })
 }
 
 addStates();
 eventSubmitForm();
+eventClearButton();

@@ -26,6 +26,7 @@ section {
 
 fieldset {
   margin: 30px;
+  border-color: #A1BCC7;
 }
 
 legend {
@@ -53,8 +54,12 @@ textarea {
   margin-top: 10px;
 }
 
-#submit {
-  margin: auto;
+#curriculum p {
+  color: #c99eb4;
+}
+
+#error p {
+  color: red;
 }
 
 footer {

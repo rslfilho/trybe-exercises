@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro de Currículo</title>
+</head>
+<body>
+  <header>
+    <h1>Formulário para Cadastro de Currículos</h1>
+    <p>Preencha todos os campos com informações verdadeiras.</p>
+  </header>
+  <main>
+    <section id="form">
+      <form action="" method="get" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <p><label for="name">Nome Completo:</label>
+            <input type="text" name="name" id="name" maxlength="40" required>
+          </p>
+          <p><label for="email">Email:</label>
+            <input type="text" name="email" id="email" maxlength="50" required>
+          </p>
+          <p><label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+          </p>
+          <p><label for="adress">Endereço:</label>
+            <input type="text" name="adress" id="adress" maxlength="200" required></input>
+          </p>
+          <p><label for="city">Cidade:</label>
+            <input type="text" name="city" id="city" maxlength="28" required>
+          </p>
+          <p><label for="state">Estado:</label>
+            <select name="state" id="state" required></select>
+          </p>
+          <p><label for="type1">
+            <input type="radio" name="type" id="type1" value="casa" checked>Casa</label>
+          <label for="type2">
+            <input type="radio" name="type" id="type2" value="Ap">Apartamento</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Dados do último emprego</legend>
+          <p><label for="resume">Resumo do currículo</label>
+            <textarea name="resume" id="resume" cols="30" rows="5" maxlength="1000" placeholder="Descreva as atividades que desempenhava no seu último emprego" required></textarea>
+          </p>
+          <p><label for="office">Cargo</label>
+            <input type="text" name="office" id="office" maxlength="40" required>
+          </p>
+          <p><label for="office-description">Descrição do cargo</label>
+            <input type="text" name="office-description" id="office-description" maxlength="500" required>
+          </p>
+          <p><label for="initial-date">Data de início</label>
+            <input type="text" name="initial-date" id="initial-date" maxlength="10" placeholder="XX/XX/XXXX" required>
+          </p>
+          <p><button type="submit" id="submit">Enviar</button></p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Desenvolvido por <a href="https://www.rslfilho.com.br" target="_blank">Roberval Filho</a> - Aula 6.1 <a href="https://www.betrybe.com" target="_blank">Trybe</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

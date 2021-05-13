@@ -17,8 +17,12 @@ header, main, footer {
   background-color: #c99e84;
   border-radius: 5px;
   padding: 10px;
-  margin: 20px 0;
+  margin: 20px auto;
   border: 1px solid #dcbb95;
+}
+
+#personal, #last-job {
+  margin-left: 40px;
 }
 
 h6 {

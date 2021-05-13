@@ -64,7 +64,7 @@ let picker = new Pikaday({
         } else {
           removeCreatedElement();
           createCurriculum();
-          location.href ='#curriculum';
+          location.href = '#curriculum';
         }
 
         form.classList.add('was-validated')
@@ -140,9 +140,9 @@ function createCvSection() {
   const parentElement = document.querySelector('body');
   const section = document.createElement('section');
 
+  section.className = 'container text-center';
   section.id = 'curriculum';
-  section.className = 'container';
-  section.innerHTML = '<h2 class="text-center">Seu Currículo</h2><div class="container" id="personal"><h4>Dados Pessoais</h4></div><div class="container" id="last-job"><h4>Dados do último Emprego</h4></div>';
+  section.innerHTML = '<h2 class="text-center">Seu Currículo</h2><div class="container text-start" id="personal"><h4>Dados Pessoais</h4></div><div class="container text-start" id="last-job"><h4>Dados do último Emprego</h4></div>';
 
   parentElement.insertBefore(section, parentElement.firstElementChild.nextElementSibling);
 }

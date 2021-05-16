@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro de Currículo</title>
+</head>
+<body>
+  <header class="container text-center">
+    <h1  class="display-4">Formulário para Cadastro de Currículos</h1>
+    <p class="lead"><em>Preencha todos os campos com informações verdadeiras.</em></p>
+  </header>
+  <main class="container">
+    <section class="container" id="form">
+      <form class="needs-validation" autocomplete="on" action="" method="get" enctype="multipart/form-data" novalidate>
+        <h4>Dados Pessoais</h4>
+        <div class="container mb-3 row">
+          <label class="form-label" class="form-label" for="name">Nome Completo</label>
+          <input class="form-control" autocomplete="on" type="text" name="name" id="name" maxlength="40" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
+        </div>
+        <div class="container mb-3 row">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" type="email" name="email" id="email" maxlength="50" required>
+          <div class="invalid-feedback">
+            Email inválido!
+          </div>
+        </div>
+        <div class="container mb-3 row">
+          <label class="form-label" for="cpf">CPF</label>
+          <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
+        </div>
+        <div class="container mb-3 row">
+          <label class="form-label" for="adress">Endereço</label>
+          <input class="form-control" type="text" name="adress" id="adress" maxlength="200" required></input>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
+        </div>
+        <div class="container mb-3 row">
+          <label class="form-label" for="city">Cidade</label>
+          <input class="form-control" type="text" name="city" id="city" maxlength="28" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
+        </div>
+        <div class="container mb-3 row">
+          <label class="form-label" for="state">Estado</label>
+          <select class="form-select" name="state" id="state" required></select>
+        </div>
+        <div class="container mb-3">
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="type" id="type1" value="casa" checked>
+          <label class="form-check-label" for="type1">Casa</label>
+          </div>
+          <div class="form-check form-check-inline">  
+            <input class="form-check-input" type="radio" name="type" id="type2" value="Ap"> 
+            <label class="form-check-label" for="type2">Apartamento</label>
+          </div>
+        </div>
+        <hr>
+        <h4>Dados do último emprego</h4>
+        <div class="container mb-3 row">
+          <label class="form-label" for="resume">Resumo do currículo</label>
+          <textarea class="form-control" name="resume" id="resume" cols="30" rows="3" maxlength="1000" placeholder="Descreva as atividades que desempenhava no seu último emprego" required></textarea>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
+        </div>
+        <div class="container mb-3 row">
+          <label class="form-label" for="office">Cargo</label>
+          <input class="form-control" type="text" name="office" id="office" maxlength="40" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
+        </div>
+        <div class="container mb-3 row">
+          <label class="form-label" for="office-description">Descrição do cargo</label>
+          <input class="form-control" type="text" name="office-description" id="office-description" maxlength="500" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
+        </div>
+        <div class="container mb-3 row">
+          <label class="form-label" for="initial-date">Data de início</label>
+          <input class="form-control" type="text" name="initial-date" id="initial-date" maxlength="10" required>
+          <div class="invalid-feedback">
+            Campo Obrigatório!
+          </div>
+        </div>
+        <hr>
+        <div class="container mb-3 text-center">
+          <button class="btn btn-success" type="submit" id="submit">Enviar</button>
+          <button class="btn btn-danger" type="reset" id="clear">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="container text-center">
+    <h5>Desenvolvido por <a href="https://www.rslfilho.com.br" target="_blank">Roberval Filho</a> - Aula 6.2 <a href="https://www.betrybe.com" target="_blank">Trybe</a></h5>
+  </footer>
+  <script src="node_modules/moment/moment.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,11 +1,12 @@
 body {
-
+  font-size: x-large;
+  margin: 20px;
 }
 h1 {
-
+font-size: larger;
 }
 h2 {
-
+font-size: larger;
 }
 
 img {
@@ -13,5 +14,30 @@ img {
 }
 
 figure {
-    margin: 0;
+    margin: 30px 10px;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: aquamarine;
+    font-size: larger;
+  }
+  
+  .figures {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  figure {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-color: azure;
+    font-size: x-large;
+    margin: 50px;
+    max-width: 1000px;
+  }
 }

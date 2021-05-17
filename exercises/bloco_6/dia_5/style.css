@@ -86,7 +86,7 @@ p strong {
 }
 
 @media screen and (max-width: 500px) {
-  p.trick {
+  p:last-of-type {
     color: #525252;
     font-size: 20px;
   }

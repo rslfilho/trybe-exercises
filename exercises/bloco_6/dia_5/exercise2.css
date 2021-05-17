@@ -73,6 +73,7 @@ article h1 {
 article p {
   padding: 10px 0px;
   line-height: 120%;
+  text-indent: 30px;
 }
 
 footer {
@@ -87,4 +88,33 @@ footer h3 {
 
 footer p {
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .asides {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  .main-content {
+    padding: 50px 100px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .main-content p {
+    text-indent: 50px;
+    line-height: 140%;
+  }
+
+  footer {
+    padding: 20px 40px;
+  }
+
+  footer p {
+    max-width: 600px;
+  }
 }

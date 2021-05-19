@@ -32,5 +32,33 @@ const longestWord = (setence) => {
 console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
 
 // Exercício  04
+// 4.1
 
+const changeX = (string) => {
+  const parameter = 'Roberval';
+  const splittedString = string.split('x');
+  let result = '';
 
+  for (let index = 0; index < splittedString.length; index += 1) {
+    if (index < splittedString.length - 1) result += splittedString[index] + parameter;
+    if (index === splittedString.length - 1) result += splittedString[index];
+  }
+  
+  return result;
+}
+
+// console.log(changeX(`Tryber x aqui!`))
+
+// 4.2
+
+const skills = ['Capacidade de Aprender', 'Organização', 'Css', 'JavaScript', 'HTML'];
+
+// 4.3
+
+const completeString = (string) => {
+  const sorttedSkills = skills.sort();
+
+  return `${string} Minhas cinco principais habilidades são ${sorttedSkills}`
+}
+
+console.log(completeString(changeX('Tryber x aqui!')));

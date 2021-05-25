@@ -13,7 +13,7 @@ const checkAnswers = (answers, student) => {
   return result;
 }
 
-const studentGrade = (answers, student, func) => func(answers, student);
+const studentGrade = (answers, student, callback) => callback(answers, student);
 
 console.log(studentGrade(rightAnswers, studentAnswers, checkAnswers));
 
@@ -35,8 +35,8 @@ const checkAnswers2 = (answers, student) => {
   return result;
 }
 
-const studentGrade2 = (answers, student, func) => {
-  const result = func(answers, student);
+const studentGrade2 = (answers, student, callback) => {
+  const result = callback(answers, student);
 
   return `O aluno acertou ${result.correct} questões,
 não respondeu ${result.n_a} questões e

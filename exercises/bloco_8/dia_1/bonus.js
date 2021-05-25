@@ -43,24 +43,36 @@ const gameActions = {
 gameActions.warriorShift = (callback) => {
   const damage = callback();
   
-  dragon.healthPoints -= damage;
-  warrior.damage += damage;
+  if (warrior.healthPoints > 0) {
+    dragon.healthPoints -= damage;
+    warrior.damage += damage;
+  } else {
+    console.log('Warrior is already dead!');
+  }
 };
 
 gameActions.mageShift = (callback) => {
   const spell = callback();
  
-  dragon.healthPoints -= spell.damage;
-  mage.damage += spell.damage;
-  mage.mana -= spell.manaSpent;
+  if (mage.healthPoints > 0) {
+    dragon.healthPoints -= spell.damage;
+    mage.damage += spell.damage;
+    mage.mana -= spell.manaSpent;
+  } else {
+    console.log('Mage is arealdy dead!');
+  }
 };
 
 gameActions.dragonShift = (callback) => {
   const damage = callback();
   
-  warrior.healthPoints -= damage;
-  mage.healthPoints -= damage;
-  dragon.damage += damage;
+  if (dragon.healthPoints > 0) {
+    warrior.healthPoints -= damage;
+    mage.healthPoints -= damage;
+    dragon.damage += damage;
+  } else {
+    console.log('Dragon is already dead!');
+  }
 };
 
 gameActions.roundEnd = () => {
@@ -78,4 +90,7 @@ console.log('Round 2');
 console.log(gameActions.roundEnd());
 
 console.log('Round 3');
+console.log(gameActions.roundEnd());
+
+console.log('Round 4');
 console.log(gameActions.roundEnd());

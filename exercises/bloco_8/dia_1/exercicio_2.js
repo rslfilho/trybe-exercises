@@ -1,4 +1,4 @@
-const checkNumber = (bet, result) => (bet !== result) ? false : true;
+const checkNumber = (bet, result) => bet === result;
 
 const lottery = (bet, callback) => {
   const result = Math.ceil(Math.random() * 5);

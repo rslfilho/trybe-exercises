@@ -2,20 +2,23 @@ const mage = {
   healthPoints: 130,
   intelligence: 45,
   mana: 125,
-  damage: 0,
+  damage: undefined,
+  totalDamage: 0,
 };
 
 const warrior = {
   healthPoints: 200,
   strength: 30,
   weaponDmg: 2,
-  damage: 0,
+  damage: undefined,
+  totalDamage: 0,
 };
 
 const dragon = {
   healthPoints: 350,
   strength: 50,
-  damage: 0,
+  damage: undefined,
+  totalDamage: 0,
 };
 
 const battleMembers = { mage, warrior, dragon };
@@ -45,7 +48,8 @@ gameActions.warriorShift = (callback) => {
   
   if (warrior.healthPoints > 0) {
     dragon.healthPoints -= damage;
-    warrior.damage += damage;
+    warrior.damage = damage;
+    warrior.totalDamage += damage;
   } else {
     console.log('Warrior is already dead!');
   }
@@ -56,7 +60,8 @@ gameActions.mageShift = (callback) => {
  
   if (mage.healthPoints > 0) {
     dragon.healthPoints -= spell.damage;
-    mage.damage += spell.damage;
+    mage.damage = spell.damage;
+    mage.totalDamage += spell.damage;
     mage.mana -= spell.manaSpent;
   } else {
     console.log('Mage is arealdy dead!');
@@ -69,7 +74,8 @@ gameActions.dragonShift = (callback) => {
   if (dragon.healthPoints > 0) {
     warrior.healthPoints -= damage;
     mage.healthPoints -= damage;
-    dragon.damage += damage;
+    dragon.damage = damage;
+    dragon.totalDamage += damage;
   } else {
     console.log('Dragon is already dead!');
   }

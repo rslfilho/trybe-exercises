@@ -69,10 +69,11 @@ const expectedResult = false;
 
 function authorUnique() {
   // escreva seu código aqui
-  let birthYears = [];
+  const birthYears = [];
   
   books.forEach((book) => birthYears.push(book['author'].birthYear));
 
+  // Solução inicial que fiz continuando depois de criar o array BirthYears
   // let result = true;
   // birthYears.forEach((year) => {
   //   let counter = 0;
@@ -84,6 +85,7 @@ function authorUnique() {
 
   // return result;
 
+  // Solução 02 que criei depois que lembrei de um kata que tinha solucionado
   const birthYearsWithoutDuplicate = Array.from(new Set(birthYears));
 
   return birthYears === birthYearsWithoutDuplicate;

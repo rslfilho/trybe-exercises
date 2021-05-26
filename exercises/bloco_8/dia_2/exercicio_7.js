@@ -70,18 +70,23 @@ const expectedResult = false;
 function authorUnique() {
   // escreva seu código aqui
   let birthYears = [];
-  let result = true;
-  books.forEach((book) => birthYears.push(book['author'].birthYear));
   
-  birthYears.forEach((year) => {
-    let counter = 0;
-    for (let value of birthYears) {
-      if (year === value) counter += 1;
-    }
-    if (counter > 1) result = false;
-  })
+  books.forEach((book) => birthYears.push(book['author'].birthYear));
 
-  return result;
+  // let result = true;
+  // birthYears.forEach((year) => {
+  //   let counter = 0;
+  //   for (let value of birthYears) {
+  //     if (year === value) counter += 1;
+  //   }
+  //   if (counter > 1) result = false;
+  // })
+
+  // return result;
+
+  const birthYearsWithoutDuplicate = Array.from(new Set(birthYears));
+
+  return birthYears === birthYearsWithoutDuplicate;
 }
 
 assert.strictEqual(authorUnique(), expectedResult);

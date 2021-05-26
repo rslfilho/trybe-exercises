@@ -84,6 +84,4 @@ function authorUnique() {
   return result;
 }
 
-// console.log(authorUnique())
-
 assert.strictEqual(authorUnique(), expectedResult);

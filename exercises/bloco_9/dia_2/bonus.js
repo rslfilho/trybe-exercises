@@ -20,13 +20,13 @@ const fetchPromisse = async () => {
   try {
     const sum = await sumRandomNumbers();
     const arraySum = await sumArray(sum);
-    // console.log(arraySum);
+    console.log(arraySum);
     return arraySum;
   } catch(error) {
-    // console.log('É mais de oito mil! Essa promise deve etar quebrada!');
+    console.log('É mais de oito mil! Essa promise deve etar quebrada!');
     return 'É mais de oito mil! Essa promise deve etar quebrada!';
   }
 }
 
-// fetchPromisse()
+fetchPromisse()
 //   .then((response) => console.log(response));

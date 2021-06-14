@@ -1,0 +1,14 @@
+1- O que é um código que é executado de modo assíncrono? Qual é a diferença disso para um código que é executado de modo síncrono?
+-> Ele é executado numa 'fila' diferente do código síncrono que é executado de cima pra baixo e da esquerda para direita. Na fila assíncrona não existe muita ordenação, o código é executado no seu tempo e no momento que tem o retorno pronto volta para a fila geral. Então nem sempre o código que entra primeiro na fila assíncrona vai sair primeiro.
+
+Quando você tem que enfileirar várias callbacks , que problema surge?
+A medida que o enfileramento fica muito grande e complexo pode ficar muito difícil de ler o código e de fazer a manutenção do mesmo.
+
+Por que as Promises são uma forma de se resolver esse problema?
+Por que ele faz com que a função que tá em await espere o resultado da anterior para ser executada, organizando a fila das assíncronas.
+
+Quando você vai se comunicar com uma API , tal comunicação deve ser síncrona ou assíncrona? Lembre-se de que o serviço ao qual você está se conectando pode demorar muito ou pouco para dar retorno, pode estar fora do ar etc.
+Assíncrona, pois caso a resposta não retorne ou venha com erro, iria quebrar a continuidade do restante do cógigo inteiro.
+
+Dada a resposta anterior, o que é fetch e para que ele serve?
+A função fetch() serve para enviar requisições a APIs de forma assíncrona e tratar as respostas (ou fata delas).
